@@ -22,19 +22,6 @@ export default function Projects() {
     },
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        type: "spring",
-        stiffness: 100,
-      },
-    },
-  };
-
   return (
     <section id="projects" className="section-padding">
       <div className="max-w-7xl mx-auto">
@@ -166,7 +153,7 @@ function ProjectCard({
       transition: {
         duration: 0.6,
         delay: index * 0.1,
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
       },
     },

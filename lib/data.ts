@@ -3,19 +3,19 @@ export const personalInfo = {
   title: "Team Leader (Full-stack)",
   tagline:
     "Building scalable web applications with modern frameworks and best practices",
-  email: "tahmidshahriar.b@gmail.com",
+  email: "tahmidshahriar.bd@gmail.com",
   phone: "+8801515652762",
-  location: "Dhaka, Bangladesh",
-  github: "https://github.com/tahmid118",
-  linkedin: "https://linkedin.com/in/tahmidshahriar",
-  twitter: "https://twitter.com/tahmid118",
+  location: "Banasree, Rampura, Dhaka, Bangladesh",
+  github: "https://github.com/tahmid1118",
+  linkedin: "https://www.linkedin.com/in/tahmid630/",
+  twitter: "https://x.com/TonyStark6300",
 };
 
 export const aboutMe = {
   introduction:
     "I'm a passionate Full Stack Developer and Team Leader with expertise in React.js, Next.js, and Node.js. Proficient at Next.js with deep understanding of frameworks, lifecycle methods, hooks, and rendering strategies (SSR, SSG, CSR).",
   description:
-    "Strong component-level logic skills using HTML5 and CSS3 for building responsive, high-performance web applications aligned with UI/UX principles. Experienced in developing and maintaining full-stack applications using React.js and Node.js, with expertise in backend services using Node.js and Express.js, database integration, authentication, and error handling.",
+    "I specialize in building scalable full-stack web applications using React.js on the frontend and Node.js with Express.js on the backend. My backend experience includes REST API architecture, secure authentication, database design & integration, middleware implementation, and robust error handling, complemented by responsive UI development with HTML5, CSS3, and modern UI/UX practices.",
 };
 
 export const skills = [
@@ -25,7 +25,6 @@ export const skills = [
       { name: "JavaScript", icon: "devicon-javascript-plain colored" },
       { name: "Dart", icon: "devicon-dart-plain colored" },
       { name: "C++", icon: "devicon-cplusplus-plain colored" },
-      { name: "MySQL", icon: "devicon-mysql-plain colored" },
     ],
   },
   {
@@ -36,6 +35,13 @@ export const skills = [
       { name: "Node.js", icon: "devicon-nodejs-plain colored" },
       { name: "Express.js", icon: "devicon-express-original" },
       { name: "Flutter", icon: "devicon-flutter-plain colored" },
+    ],
+  },
+  {
+    category: "Database",
+    items: [
+      { name: "MySQL", icon: "devicon-mysql-plain colored" },
+      { name: "Firebase", icon: "devicon-firebase-plain colored" },
     ],
   },
   {

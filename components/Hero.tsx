@@ -76,7 +76,7 @@ export default function Hero() {
                 Get In Touch
               </a>
               <a
-                href="/resume.pdf"
+                href="/assets/Tahmid_Shahriar_Bhuiyan_Updated_CV.pdf"
                 download
                 className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2"
               >
