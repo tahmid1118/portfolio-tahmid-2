@@ -46,7 +46,7 @@ export default function About() {
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               About <span className="gradient-text">Me</span>
             </h2>
-            <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -76,19 +76,19 @@ export default function About() {
                 variants={itemVariants}
               >
                 <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold gradient-text">5+</div>
+                  <div className="text-3xl font-bold gradient-text">3+</div>
                   <div className="text-sm text-muted-foreground mt-1">
                     Years Experience
                   </div>
                 </div>
                 <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold gradient-text">50+</div>
+                  <div className="text-3xl font-bold gradient-text">20+</div>
                   <div className="text-sm text-muted-foreground mt-1">
                     Projects Completed
                   </div>
                 </div>
                 <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold gradient-text">30+</div>
+                  <div className="text-3xl font-bold gradient-text">10+</div>
                   <div className="text-sm text-muted-foreground mt-1">
                     Happy Clients
                   </div>
@@ -147,18 +147,18 @@ export default function About() {
               </div>
 
               {/* Quick Facts */}
-              <div className="bg-linear-to-br from-blue-500/10 to-purple-500/10 p-8 rounded-2xl border border-border">
+              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-8 rounded-2xl border border-border">
                 <h3 className="text-xl font-semibold mb-4 text-foreground">
                   Quick Facts
                 </h3>
                 <ul className="space-y-3 text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary rounded-full" />
-                    Available for freelance projects
+                    Specialized in React & Node.js ecosystem
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary rounded-full" />
-                    Open to remote opportunities
+                    Strong focus on scalable architecture
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary rounded-full" />

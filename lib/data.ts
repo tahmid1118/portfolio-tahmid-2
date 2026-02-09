@@ -13,7 +13,7 @@ export const personalInfo = {
 
 export const aboutMe = {
   introduction:
-    "I'm a passionate Full Stack Developer and Team Leader with expertise in React.js, Next.js, and Node.js. Proficient at Next.js with deep understanding of frameworks, lifecycle methods, hooks, and rendering strategies (SSR, SSG, CSR).",
+    "I'm a passionate Full Stack Developer and Team Leader with expertise in React.js, Next.js, and Node.js. ",
   description:
     "I specialize in building scalable full-stack web applications using React.js on the frontend and Node.js with Express.js on the backend. My backend experience includes REST API architecture, secure authentication, database design & integration, middleware implementation, and robust error handling, complemented by responsive UI development with HTML5, CSS3, and modern UI/UX practices.",
 };
@@ -58,20 +58,20 @@ export const skills = [
 export const experiences = [
   {
     company: "ULTRA-X BD LTD",
-    position: "Team Leader (Full-stack)",
-    duration: "June 2022 - Current",
+    position: "Team Leader (Full-stack Engineer)",
+    duration: "3+ years",
     location: "Dhaka, Bangladesh",
     description: [
-      "Proficient at Next.js with deep understanding of frameworks, lifecycle methods, hooks, and rendering strategies (SSR, SSG, CSR)",
-      "Strong component-level logic skills using HTML5 and CSS3 for building responsive, high-performance web applications aligned with UI/UX principles",
-      "Developed and maintained full-stack applications using React.js and Node.js",
-      "Extensive knowledge in backend services using Node.js and Express.js, including database integration, authentication, and error handling",
-      "Designed and maintained relational databases using MySQL, ensuring optimized and efficient data storage and retrieval",
-      "Followed component-driven development principles to build reusable, maintainable UI components",
-      "Skilled in TypeScript for scalable and type-safe application development",
-      "Familiar with Next.js App Router and API routes for rapid prototyping and consistent design systems",
-      "Applied OOP principles in both frontend and backend contexts to maintain modular, scalable code structures",
-      "Used Git and GitHub for version control, team collaboration, and continuous integration workflows",
+      "Led and mentored a cross-functional engineering team, driving sprint planning, task distribution, code reviews, and technical decision-making",
+      "Architected and scaled production-grade applications using Next.js (App Router), selecting optimal rendering strategies (SSR, SSG, ISR, CSR) for performance and SEO",
+      "Owned end-to-end system design for full-stack applications using React.js, Node.js, and Express.js with a strong focus on scalability and maintainability",
+      "Designed and maintained robust backend services, including RESTful API architecture, authentication & authorization flows, and centralized error handling",
+      "Planned and optimized MySQL database schemas, implementing indexing, query optimization, and data integrity strategies for high-traffic systems",
+      "Established component-driven development and internal design systems to ensure reusable, consistent, and maintainable UI across products",
+      "Enforced TypeScript-first development practices to improve code quality, reduce runtime errors, and support large-scale codebases",
+      "Applied clean architecture, OOP, and SOLID principles across frontend and backend systems to enable modular and extensible designs",
+      "Defined and maintained Git-based workflows (branching strategies, PR reviews, CI-friendly practices) to ensure high code quality and team collaboration",
+      "Acted as the primary technical owner, collaborating with product, design, and business stakeholders to translate requirements into scalable technical solutions",
     ],
   },
 ];
@@ -83,8 +83,8 @@ export const projects = [
       "A web application which is the ERP app for Ultra-X BD which maintains official formalities such as recording attendance, leave management, leave approval, hierarchy and leave management, hierarchy and leave management and many more.",
     technologies: ["Next.js", "Node.js", "MySQL", "Express.js", "TypeScript"],
     image: "/projects/uxbd.jpg",
-    github: "https://github.com/tahmid118/uxbd-app",
-    demo: "https://uxbd.com",
+    github: "",
+    demo: "https://uxerp.ultra-x.jp/",
     featured: true,
   },
   {
@@ -93,8 +93,8 @@ export const projects = [
       "VRT is an event management app for Japan - Bangladesh collaborating event 'Code Samurai'. Records interested participant's data for the hackathon contest from all over Bangladesh. Generates an attendance record of the event. Shows necessary information and statistics about the event.",
     technologies: ["Next.js", "Node.js", "MySQL", "Express.js"],
     image: "/projects/vrt.jpg",
-    github: "https://github.com/tahmid118/vrt",
-    demo: "https://vrt-demo.com",
+    github: "",
+    demo: "",
     featured: true,
   },
   {
@@ -103,8 +103,8 @@ export const projects = [
       "An exhibition management tool that helps organizing exhibitions in Japan. Records visitor and exhibitor's attendance. Generates ID card for every visitor. Manages project data transferring among visitors and exhibitors. Generates necessary reports.",
     technologies: ["Next.js", "Node.js", "MySQL", "Express.js"],
     image: "/projects/ems.jpg",
-    github: "https://github.com/tahmid118/ems",
-    demo: "https://ems-demo.com",
+    github: "",
+    demo: "https://bdtmp.ultra-x.jp/ems",
     featured: true,
   },
 ];
@@ -128,7 +128,7 @@ export const certifications = [
     date: "2022",
   },
   {
-    name: "Best West University Merit Scholarship",
+    name: "East West University Merit Scholarship",
     issuer: "East West University",
     date: "2017-2022",
   },

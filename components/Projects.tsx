@@ -94,7 +94,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/tahmid118"
+            href="https://github.com/tahmid1118"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover:shadow-lg hover:scale-105"
@@ -209,28 +209,6 @@ function ProjectCard({
           className="absolute inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center gap-4"
         >
           <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{
-              scale: isHovered ? 1 : 0,
-              rotate: isHovered ? 0 : -180,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 20,
-              delay: 0.1,
-            }}
-            whileHover={{ scale: 1.2, rotate: 5 }}
-            whileTap={{ scale: 0.9 }}
-            className="p-4 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
-            aria-label="View GitHub"
-          >
-            <Github className="text-black" size={24} />
-          </motion.a>
-          <motion.a
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
@@ -266,7 +244,10 @@ function ProjectCard({
         >
           {project.title}
         </motion.h3>
-        <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
+        <p
+          className="text-muted-foreground text-sm mb-4 line-clamp-3 cursor-help"
+          title={project.description}
+        >
           {project.description}
         </p>
 
@@ -289,7 +270,8 @@ function ProjectCard({
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 }}
-              className="px-3 py-1 bg-secondary text-xs font-medium rounded-full"
+              className="px-3 py-1 bg-secondary text-xs font-medium rounded-full cursor-help"
+              title={project.technologies.slice(4).join(", ")}
             >
               +{project.technologies.length - 4}
             </motion.span>
