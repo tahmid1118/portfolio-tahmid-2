@@ -52,10 +52,7 @@ export default function Skills() {
   };
 
   return (
-    <section
-      id="skills"
-      className="section-padding bg-gray-50 dark:bg-gray-900"
-    >
+    <section id="skills" className="section-padding bg-secondary/30">
       <div className="max-w-7xl mx-auto">
         <motion.div
           ref={ref}
@@ -79,9 +76,9 @@ export default function Skills() {
               <motion.div
                 key={category.category}
                 variants={itemVariants}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all"
+                className="bg-background rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all border border-border"
               >
-                <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8 text-center text-gray-800 dark:text-gray-100">
+                <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-8 text-center text-foreground">
                   {category.category}
                 </h3>
 
@@ -114,7 +111,7 @@ export default function Skills() {
                           className={`${skill.icon} text-4xl sm:text-6xl transition-transform group-hover:scale-110`}
                         />
                       )}
-                      <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs sm:text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 px-3 py-1 rounded-md shadow-lg z-10">
+                      <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-xs sm:text-sm font-medium text-foreground bg-background border border-border px-3 py-1 rounded-md shadow-lg z-10">
                         {skill.name}
                       </span>
                     </motion.div>

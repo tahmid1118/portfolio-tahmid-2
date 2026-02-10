@@ -1,8 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useTheme } from "./ThemeProvider";
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -16,6 +17,7 @@ const navItems = [
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,9 +38,18 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="flex items-center justify-between md:justify-center h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 mx-auto">
             {navItems.map((item, index) => (
               <motion.a
                 key={item.name}
@@ -54,14 +65,41 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+          {/* Theme Toggle Button */}
+          <motion.button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg bg-secondary hover:bg-primary/10 transition-all"
+            aria-label="Toggle theme"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+            <AnimatePresence mode="wait">
+              {theme === "dark" ? (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Sun size={20} className="text-primary" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Moon size={20} className="text-primary" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
         </div>
       </div>
 

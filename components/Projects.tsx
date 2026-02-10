@@ -146,7 +146,7 @@ function ProjectCard({
       <div className="relative h-40 sm:h-48 bg-linear-to-br from-blue-500/20 to-purple-500/20 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <motion.div
-            className="text-6xl font-bold text-white/10"
+            className="text-6xl font-bold text-foreground/10"
             animate={{
               scale: isHovered ? 1.2 : 1,
             }}
@@ -190,10 +190,10 @@ function ProjectCard({
             }}
             whileHover={{ scale: 1.2, rotate: -5 }}
             whileTap={{ scale: 0.9 }}
-            className="p-4 bg-white rounded-full shadow-lg hover:shadow-xl transition-shadow"
+            className="p-4 bg-background rounded-full shadow-lg hover:shadow-xl transition-shadow"
             aria-label="View Demo"
           >
-            <ExternalLink className="text-black" size={24} />
+            <ExternalLink className="text-primary" size={24} />
           </motion.a>
         </motion.div>
       </div>
