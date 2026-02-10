@@ -42,54 +42,63 @@ export default function About() {
           animate={inView ? "visible" : "hidden"}
         >
           {/* Section Title */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <motion.div
+            variants={itemVariants}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               About <span className="gradient-text">Me</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
             {/* Left Column - Description */}
             <motion.div variants={itemVariants} className="space-y-6">
               <div>
-                <h3 className="text-2xl font-semibold mb-4 text-foreground">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-foreground">
                   Who I Am
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   {aboutMe.introduction}
                 </p>
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-4 text-foreground">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-foreground">
                   What I Do
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                   {aboutMe.description}
                 </p>
               </div>
 
               {/* Stats */}
               <motion.div
-                className="grid grid-cols-3 gap-4 pt-6"
+                className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 pt-6"
                 variants={itemVariants}
               >
-                <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold gradient-text">3+</div>
-                  <div className="text-sm text-muted-foreground mt-1">
+                <div className="text-center p-3 sm:p-4 bg-background rounded-lg shadow-sm">
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">
+                    3+
+                  </div>
+                  <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                     Years Experience
                   </div>
                 </div>
-                <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold gradient-text">20+</div>
-                  <div className="text-sm text-muted-foreground mt-1">
+                <div className="text-center p-3 sm:p-4 bg-background rounded-lg shadow-sm">
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">
+                    20+
+                  </div>
+                  <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                     Projects Completed
                   </div>
                 </div>
-                <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <div className="text-3xl font-bold gradient-text">10+</div>
-                  <div className="text-sm text-muted-foreground mt-1">
+                <div className="text-center p-3 sm:p-4 bg-background rounded-lg shadow-sm col-span-2 sm:col-span-1">
+                  <div className="text-2xl sm:text-3xl font-bold gradient-text">
+                    10+
+                  </div>
+                  <div className="text-xs sm:text-sm text-muted-foreground mt-1">
                     Happy Clients
                   </div>
                 </div>
@@ -98,8 +107,8 @@ export default function About() {
 
             {/* Right Column - Contact Info & Details */}
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="bg-background p-8 rounded-2xl shadow-lg border border-border">
-                <h3 className="text-2xl font-semibold mb-6 text-foreground">
+              <div className="bg-background p-6 sm:p-8 rounded-2xl shadow-lg border border-border">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-foreground">
                   Get In Touch
                 </h3>
 
@@ -147,11 +156,11 @@ export default function About() {
               </div>
 
               {/* Quick Facts */}
-              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-8 rounded-2xl border border-border">
-                <h3 className="text-xl font-semibold mb-4 text-foreground">
+              <div className="bg-linear-to-br from-blue-500/10 to-purple-500/10 p-6 sm:p-8 rounded-2xl border border-border">
+                <h3 className="text-lg sm:text-xl font-semibold mb-4 text-foreground">
                   Quick Facts
                 </h3>
-                <ul className="space-y-3 text-muted-foreground">
+                <ul className="space-y-3 text-sm sm:text-base text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <span className="w-2 h-2 bg-primary rounded-full" />
                     Specialized in React & Node.js ecosystem

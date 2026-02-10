@@ -107,25 +107,31 @@ export default function Contact() {
           animate={inView ? "visible" : "hidden"}
         >
           {/* Section Title */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <motion.div
+            variants={itemVariants}
+            className="text-center mb-12 md:mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
               Get In <span className="gradient-text">Touch</span>
             </h2>
             <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
-            <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-muted-foreground mt-6 max-w-2xl mx-auto px-4">
               Have a project in mind or want to collaborate? I&apos;d love to
               hear from you!
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
-            <motion.div variants={itemVariants} className="space-y-8">
+            <motion.div
+              variants={itemVariants}
+              className="space-y-6 sm:space-y-8"
+            >
               <div>
-                <h3 className="text-2xl font-semibold mb-6">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
                   Let&apos;s Talk About Your Project
                 </h3>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8">
                   I&apos;m always open to discussing new projects, creative
                   ideas, or opportunities to be part of your vision. Feel free
                   to reach out!
@@ -137,29 +143,29 @@ export default function Contact() {
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={info.label}
-                    className="flex items-start gap-4 p-4 bg-background rounded-xl border border-border hover:border-primary/50 transition-colors"
+                    className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 bg-background rounded-xl border border-border hover:border-primary/50 transition-colors"
                     initial={{ opacity: 0, x: -20 }}
                     animate={
                       inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
                     }
                     transition={{ delay: index * 0.1 }}
                   >
-                    <div className="p-3 bg-primary/10 rounded-lg">
-                      <info.icon className="text-primary" size={20} />
+                    <div className="p-2 sm:p-3 bg-primary/10 rounded-lg">
+                      <info.icon className="text-primary" size={18} />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">
+                      <p className="text-xs sm:text-sm text-muted-foreground mb-1">
                         {info.label}
                       </p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-foreground hover:text-primary transition-colors font-medium"
+                          className="text-sm sm:text-base text-foreground hover:text-primary transition-colors font-medium break-all"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-foreground font-medium">
+                        <p className="text-sm sm:text-base text-foreground font-medium">
                           {info.value}
                         </p>
                       )}
@@ -170,18 +176,20 @@ export default function Contact() {
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
-                <div className="flex gap-4">
+                <h4 className="text-base sm:text-lg font-semibold mb-4">
+                  Follow Me
+                </h4>
+                <div className="flex gap-3 sm:gap-4">
                   {socialLinks.map((social) => (
                     <a
                       key={social.label}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-background border border-border rounded-lg hover:border-primary hover:bg-primary/10 transition-all"
+                      className="p-2 sm:p-3 bg-background border border-border rounded-lg hover:border-primary hover:bg-primary/10 transition-all"
                       aria-label={social.label}
                     >
-                      <social.icon size={20} />
+                      <social.icon size={18} />
                     </a>
                   ))}
                 </div>
@@ -192,7 +200,7 @@ export default function Contact() {
             <motion.div variants={itemVariants}>
               <form
                 onSubmit={handleSubmit}
-                className="bg-background p-8 rounded-2xl shadow-lg border border-border space-y-6"
+                className="bg-background p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg border border-border space-y-4 sm:space-y-6"
               >
                 <div>
                   <label
@@ -208,7 +216,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                     placeholder="Your name"
                   />
                 </div>
@@ -227,7 +235,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -246,7 +254,7 @@ export default function Contact() {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
                     placeholder="Project discussion"
                   />
                 </div>
@@ -265,7 +273,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all resize-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -273,7 +281,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className={`w-full px-8 py-3 rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
+                  className={`w-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base rounded-lg font-medium transition-all flex items-center justify-center gap-2 ${
                     status === "sent"
                       ? "bg-green-500 text-white"
                       : "bg-primary text-primary-foreground hover:bg-primary/90 hover:shadow-lg"

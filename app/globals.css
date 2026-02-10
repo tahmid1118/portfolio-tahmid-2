@@ -58,16 +58,27 @@ html {
 }
 
 .section-padding {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .section-padding {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
   .section-padding {
     padding-left: 3rem;
     padding-right: 3rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -75,5 +86,26 @@ html {
   .section-padding {
     padding-left: 6rem;
     padding-right: 6rem;
+  }
+}
+
+/* Responsive utilities */
+@media (max-width: 639px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
   }
 }

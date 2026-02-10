@@ -6,11 +6,6 @@ import { ExternalLink, Github } from "lucide-react";
 import { MouseEvent, useRef, useState } from "react";
 
 export default function Projects() {
-  const [filter, setFilter] = useState<"all" | "featured">("all");
-
-  const filteredProjects =
-    filter === "all" ? projects : projects.filter((p) => p.featured);
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -23,7 +18,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -33,54 +28,24 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <div className="w-24 h-1 bg-linear-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
-          <p className="text-lg text-muted-foreground mt-6 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground mt-6 max-w-2xl mx-auto px-4">
             A selection of my recent work and personal projects
           </p>
         </motion.div>
 
-        {/* Filter Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="flex justify-center gap-4 mb-12"
-        >
-          <button
-            onClick={() => setFilter("all")}
-            className={`px-6 py-2 rounded-full font-medium transition-all ${
-              filter === "all"
-                ? "bg-primary text-primary-foreground shadow-lg"
-                : "bg-secondary text-foreground hover:bg-primary/10"
-            }`}
-          >
-            All Projects
-          </button>
-          <button
-            onClick={() => setFilter("featured")}
-            className={`px-6 py-2 rounded-full font-medium transition-all ${
-              filter === "featured"
-                ? "bg-primary text-primary-foreground shadow-lg"
-                : "bg-secondary text-foreground hover:bg-primary/10"
-            }`}
-          >
-            Featured
-          </button>
-        </motion.div>
-
         {/* Projects Grid */}
         <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {filteredProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </motion.div>
@@ -178,7 +143,7 @@ function ProjectCard({
       className="group bg-background border border-border rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
     >
       {/* Project Image */}
-      <div className="relative h-48 bg-linear-to-br from-blue-500/20 to-purple-500/20 overflow-hidden">
+      <div className="relative h-40 sm:h-48 bg-linear-to-br from-blue-500/20 to-purple-500/20 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <motion.div
             className="text-6xl font-bold text-white/10"
@@ -234,9 +199,9 @@ function ProjectCard({
       </div>
 
       {/* Project Details */}
-      <div className="p-6" style={{ transform: "translateZ(20px)" }}>
+      <div className="p-4 sm:p-6" style={{ transform: "translateZ(20px)" }}>
         <motion.h3
-          className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors"
+          className="text-lg sm:text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors"
           animate={{
             x: isHovered ? 5 : 0,
           }}

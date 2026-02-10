@@ -36,7 +36,7 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="flex items-center justify-center h-16 md:h-20">
+        <div className="flex items-center justify-between md:justify-center h-16 md:h-20">
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (

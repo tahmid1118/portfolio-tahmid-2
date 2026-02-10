@@ -16,10 +16,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center section-padding pt-32"
+      className="min-h-screen flex items-center justify-center section-padding pt-24 md:pt-32"
     >
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -27,7 +27,7 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
           >
             <motion.h2
-              className="text-lg md:text-xl text-muted-foreground mb-2"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
@@ -36,7 +36,7 @@ export default function Hero() {
             </motion.h2>
 
             <motion.h1
-              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4"
+              className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-3 md:mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -45,7 +45,7 @@ export default function Hero() {
             </motion.h1>
 
             <motion.h3
-              className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-6"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-4 md:mb-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
@@ -54,7 +54,7 @@ export default function Hero() {
             </motion.h3>
 
             <motion.p
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl"
+              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
@@ -64,21 +64,21 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-wrap gap-4 mb-8"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 mb-6 md:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
             >
               <a
                 href="#contact"
-                className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover:shadow-lg hover:scale-105"
+                className="px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover:shadow-lg hover:scale-105 text-center"
               >
                 Get In Touch
               </a>
               <a
                 href="/assets/Tahmid_Shahriar_Bhuiyan_Updated_CV.pdf"
                 download
-                className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all hover:shadow-lg hover:scale-105 flex items-center gap-2"
+                className="px-6 sm:px-8 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all hover:shadow-lg hover:scale-105 flex items-center justify-center gap-2"
               >
                 <Download size={20} />
                 Download CV
@@ -111,12 +111,12 @@ export default function Hero() {
 
           {/* Image/Visual Element */}
           <motion.div
-            className="relative hidden md:flex items-center justify-center"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            className="relative flex items-center justify-center order-first md:order-last"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <div className="relative w-full max-w-md aspect-square">
+            <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
               {/* Animated background circles */}
               <motion.div
                 className="absolute inset-0 rounded-full bg-linear-to-r from-blue-500/20 to-purple-500/20 blur-3xl"

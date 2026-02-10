@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     description: "Portfolio of Tahmid Shahriar Bhuiyan - Full Stack Developer",
     type: "website",
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({
